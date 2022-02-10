@@ -1,3 +1,4 @@
+import transport.BicycleTransport;
 import transport.CarTransport;
 import transport.MotocycleTransport;
 import transport.Transport;
@@ -24,6 +25,9 @@ public class Main {
                 break;
             case "log":
                 transport = new MotocycleTransport();
+                break;
+            case "eats":
+                transport = new BicycleTransport();
                 break;
             default:
                 System.out.println("Selecione o tipo de entrega");
