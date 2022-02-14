@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="java-pattern-factory" />
+        <module name="abstract-factory" />
       </profile>
     </annotationProcessing>
   </component>
