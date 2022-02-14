@@ -1,4 +1,5 @@
 import app.Application;
+import factory.BoatTransport;
 import factory.ITransportFactory;
 import factory.NineNineTransport;
 import factory.UberTransport;
@@ -9,14 +10,15 @@ public class Main {
         Application app;
         ITransportFactory factory;
 
-        String company = "uber";
+        String company = "boat";
 
         if(company == "uber"){
             factory = new UberTransport();
-        } else{
+        } else if(company == "99"){
             factory = new NineNineTransport();
+        } else {
+            factory = new BoatTransport();
         }
-
         app = new Application(factory);
 
         return app;
