@@ -1,18 +1,19 @@
 package builders;
 
-import cars.Truck;
+import cars.SportsCar;
 import components.CarType;
 import components.Colour;
 import components.Engine;
 import components.Transmission;
 
-public class TruckBuilder implements IBuilder{
+public class SportsCarBuilder implements IBuilder {
 
     private  CarType carType;
     private  int seats;
     private  Engine engine;
     private  Transmission transmission;
     private Colour colour;
+
 
     @Override
     public void setCarType(CarType carType) {
@@ -34,12 +35,11 @@ public class TruckBuilder implements IBuilder{
         this.engine = engine;
     }
 
-    @Override
     public void setColour(Colour colour) {
         this.colour = colour;
     }
 
-    public Truck getresult(){
-        return new Truck(carType, seats, engine, transmission);
+    public SportsCar getResult(){
+        return new SportsCar(carType,seats,engine,transmission,colour);
     }
 }

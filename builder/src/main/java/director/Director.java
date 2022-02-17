@@ -22,4 +22,11 @@ public class Director {
         builder.setTransmission(Transmission.AUTOMATIC_SEQUENTIAL);
     }
 
+    public void constructSportsCar(IBuilder builder){
+        builder.setCarType(CarType.SPORTCAR);
+        builder.setSeats(2);
+        builder.setEngine(new Engine(4000));
+        builder.setTransmission(Transmission.MANUAL);
+        builder.setColour(Colour.YELLOW);
+    }
 }

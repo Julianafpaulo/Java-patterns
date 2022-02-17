@@ -1,6 +1,8 @@
 import builders.CarBuilder;
+import builders.SportsCarBuilder;
 import builders.TruckBuilder;
 import cars.Car;
+import cars.SportsCar;
 import cars.Truck;
 import director.Director;
 
@@ -27,6 +29,15 @@ public class Main {
 
         System.out.println(truck.result());
 
+        //criando o sportscar
+
+        SportsCarBuilder sportsCarBuilder = new SportsCarBuilder();
+        director.constructSportsCar(sportsCarBuilder);
+
+        SportsCar sportsCar = sportsCarBuilder.getResult();
+
+        System.out.println(sportsCar.getCarType() +" "+ sportsCar.getColour() +
+                " produzido com sucesso!");
     }
 
 
