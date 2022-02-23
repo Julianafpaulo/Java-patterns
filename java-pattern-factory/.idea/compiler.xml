@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="builder" />
         <module name="adapter" />
+        <module name="bridge" />
         <module name="java-pattern-factory" />
         <module name="abstract-factory" />
       </profile>
