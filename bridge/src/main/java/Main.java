@@ -1,9 +1,7 @@
-import platforms.Facebook;
-import platforms.IPlatform;
-import platforms.Twitch;
-import platforms.Youtube;
+import platforms.*;
 import transmissions.AdvancedLive;
 import transmissions.Live;
+import transmissions.RecordedLive;
 
 public class Main {
 
@@ -12,6 +10,7 @@ public class Main {
         startLive(new Youtube());
         startAdvancedLive(new Twitch());
         startLive(new Facebook());
+        startRecordedLive(new DisneyPlus());
 
     }
 
@@ -31,6 +30,16 @@ public class Main {
         live.broadcasting();
         live.comments();
         live.subtitles();
+        live.result();
+
+    }
+
+    public static void startRecordedLive(IPlatform platform){
+        System.out.println("... Aguarde transmissão avançada! ");
+
+        RecordedLive live = new RecordedLive(platform);
+        live.broadcasting();
+        live.record();
         live.result();
 
     }
